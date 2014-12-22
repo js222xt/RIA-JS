@@ -45,6 +45,7 @@ var App = React.createClass({
 
     sendMessage: function (e) {
         if (e.which === 13) {
+            e.preventDefault();
             var name = this.refs.name.getDOMNode().value;
             var text = this.refs.message.getDOMNode().value;
             myDataRef.push({name: name, text: text});
